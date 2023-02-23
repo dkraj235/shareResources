@@ -1,0 +1,41 @@
+
+<%- include("partials/header") -%>
+
+
+<main style="background-color:#f5f5f5" class="form-signin w-100 m-auto">
+
+<!--User Deatials  -->
+  <form action="/createnewcollegue" method="post"  enctype='multipart/form-data'>
+    <h1 class="h3 mb-3 fw-normal">JOIN COLLEGUES</h1>
+    <div class="form-floating">
+      <input type="name" name="colleguename" class="form-control" id="floatingInput"  placeholder="name" required>
+      <label for="floatingInput">Name</label>
+    </div>
+    <div class="form-floating">
+      <input type="text"  name="colleguesession" class="form-control" id="floatingInput"  placeholder="like 2020-CSE" required>
+      <label for="floatingInput">Session</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" name="colleguecollege" class="form-control" id="floatingInput"  placeholder="Havard University" required>
+      <label for="floatingInput">College</label>
+    </div>
+     <div class="form-floating">
+       <input type="url" name="colleguecontacturl" class="form-control" id="usercontacturl"  placeholder="user contatct url" required>
+       <label for="floatingInput">Linkdin Profile URl</label>
+     </div>
+
+    <div class="form-floating">
+      <input type="file" class="form-control" name="collegueimg" placeholder="format image" multiple id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" >
+         <label for="floatingInput">profile-picture </label>
+    </div>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-outline-dark" type="submit">Join</button>
+
+  </form>
+</main>
+
+<p class="copyright register-copyright" >© 2023 Copyright:All rights reserved SAndS</p>

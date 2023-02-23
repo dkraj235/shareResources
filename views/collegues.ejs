@@ -1,0 +1,29 @@
+<%- include("partials/header") -%>
+
+<h2 class="friend">Make Cotact With Your Colleagues</h2>
+<section class="profile-margin">
+  <div class="row ">
+  <% allCollegues.forEach(function(collegue) { %>
+    <div class="card mb-5 mx-2 col-mid-3 col-sm-4" style="width: 18rem; text-align:left; background:#ccc">
+      <div class="mb-1 " style=" text-align:center;" >
+        <img class="mb-2 mt-2" style= "height:100px; border-radius:100%; width:100px;" src="./uploads/<%=collegue.collegueimg%>" alt="uploaded_images">
+    </div>
+    <strong style="font-size:1em;" class="title"> <span>Name : </span><%= collegue.colleguename %> </strong>
+    <p class="card-title" ><span>Session : </span><%= collegue.colleguesession %></p>
+    <p class="card-text"><span>College : </span><%= collegue.colleguecollege %></p> %>
+<a class="mb-2" style="text-decoration:none ; color:#fff; font-family:Merriweather"  href="<%= collegue.colleguecontacturl %>"><button class="btn btn-dark">See Profile</button></a>
+    </div>
+  <% })  %>
+
+  <div class="card mb-5 mx-2 col-mid-3 col-sm-4 addprofilediv" style="width: 18rem; background:#ccc;">
+
+  <a  style="text-decoration: none; color:#000;" href="/createnewcollegue"><span class="addprofile"><i class="fa-circle-plus  fa-solid fa-plus fa-5x"></i></span></a>
+
+  </div>
+
+  </div>
+
+<!-- fa-circle-plus -->
+
+
+</section>

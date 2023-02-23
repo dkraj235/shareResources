@@ -1,0 +1,20 @@
+<%- include("partials/header") -%>
+<%- include("partials/chooseone") -%>
+<div class="container">
+<h1 class="branchNotes-heading">Computer Science</h1>
+
+<section class="resource-margin" >
+<div class="row">
+    <% allCseFiles.forEach(function(cseFiles) {  %>
+      <div class="card mb-5 mx-4 col-sm-6 cshadow" style="width: 18rem; background-color:#DDDDDD;">
+        <div class="card-body ">
+        <h5 class="card-title"><%= cseFiles.fileTitle %></h5>
+          <a href="/uploads/<%= cseFiles.pdf%>"><img style="border-radius:100%;"  class="pdf-image" src="images/dilip.jpg" alt="pdf_image"></a>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+
+<%- include("partials/footer") -%>

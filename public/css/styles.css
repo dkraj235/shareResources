@@ -1,0 +1,486 @@
+html {
+    min-height: 100%;
+    position: relative;
+  }
+
+
+body{
+    text-align: center;
+    /* background: #f8f9fa; */
+    background: transparent;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-size: initial;
+    background-color: #bdbdbd;
+}
+   /* font-family: 'MonteCarlo', cursive;
+    font-family: 'Merriweather', serif;
+font-family: 'Ubuntu', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  margin: 0;
+  padding: 0;
+}
+
+/* .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+} */
+
+.navbar {
+    margin-: 0;
+    padding: 0;
+    /* padding-bottom: 15px; */
+    border: 0;
+    border-radius: 0;
+    /* margin-bottom: 0; */
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+a:hover, a:active, a:visited, a:link{
+    text-decoration: none;
+}
+
+.navbar-brand{
+    font-size: 4rem;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    line-height: 1.5;
+
+}
+
+
+#brand-color{
+  /* font-family: 'MonteCarlo', cursive; */
+     font-weight: bolder;
+     color:#000;
+     /* border-radius: 3px; */
+     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+  /* background: #fff;
+border-radius: 7px;
+box-shadow: 0 2px 5px #ccc;
+padding: 10px;
+width: 240px;
+margin: 16px;
+float: left; */
+  /* color:#2C3333; */
+
+
+#brand-paragraph{
+    font-size: 1rem;
+    color: #000;
+}
+
+.heading{
+    font-family:  sans-serif;
+    color:#FAF8F1;
+    font-size: 3em;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+#change-menucolor li a{
+
+  color:#434242;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: Roboto,Arial,sans-serif;
+}
+
+#change-menucolor li:first-child{
+  border-radius: 3px;
+  background-color:#EAEAEA;
+  opacity: 70%;
+  /* font-weight: bold; */
+
+}
+
+#change-menucolor li a:hover{
+  text-decoration: underline;
+  color:#222222;
+
+}
+
+/*Carrousol styling  */
+#carouselExample{
+  position: relative;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 3px;
+  /* box-shadow: 0 2px 5px #ccc; */
+  margin:0px 80px 0px;
+  background: #8d8d8d ;
+  /* border-color: 3f37c9 #566A6E; */
+}
+
+.home-image {
+  height: 180px;
+  border-radius: 100%;
+  margin: 10px;
+  z-index: 3;
+}
+
+
+.find-resurces{
+    position: absolute;
+    margin-top: 5em;
+    right: 0;
+    bottom: 5;
+}
+
+.first_image{
+  width: 100px;
+}
+
+/* ///////////////////////////////////////////////////////horizontal line////////////////////// */
+/* horizontal line */
+
+.f-horizonrtal{
+   margin: 100px auto 0px;
+    width: 5%;
+    text-align: center;
+    border-top: 5px dashed #000 ;
+}
+
+/* Department */
+
+#department{
+  margin: 50px auto 0;
+  width: 80%;
+  text-align: center;
+
+}
+
+.departmentclass{
+    margin-bottom: 20px;
+    padding:10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+.department-heading{
+  /* background: #323232; */
+  color:#323232;
+box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  text-align:center;
+  font-size: 5em;
+  line-height: 2;
+  letter-spacing:3px;
+}
+
+.department-image{
+  margin-bottom: 50px;
+  width:220px;
+  height: 220px;
+  border-radius:12%;
+}
+
+.deparment-text{
+  text-align: left;
+  color:#000;
+  font-family: 'Merriweather', serif;
+
+}
+
+
+/* Contact us */
+  /* top right-left bottom */
+
+#contact{
+  margin: 100px 200px 0;
+  text-align: left;
+}
+
+.contactus{
+  padding:  25px 0 25px ;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+#sharednotes-heading{
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 3em;
+  line-height: 2;
+  letter-spacing: 3px;
+}
+
+#shareNotes{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.subject{
+  border: 7px;
+  color:#394867;
+  /* box-shadow: 0px 2px 5px #9BA4B4; */
+}
+.subject:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+ .formsection{
+   font-weight:2;
+   font-family: 'Ubuntu', sans-serif;
+ }
+
+
+ /* deopdown for branch */
+
+ #dropdown-text{
+   text-align: left;
+   list-style-type: none;
+ }
+
+#semester{
+  font-size: 4em;
+  color:#000;
+}
+
+.dropdown-semester{
+  color:blue;
+}
+
+#footer form input, textarea {
+ background-color: #F7F7F7;
+
+}
+
+#contact form input, textarea{
+   background-color: #F7F7F7;
+}
+
+ /* Footer */
+
+ #footer{
+   /* border-radius: 7px; */
+   /* box-shadow: 0 2px 5px #ccc; */
+  margin-top: 50px;
+  background: #000;
+  color:#ffffff;
+  font-family: 'Open Sans', sans-serif;
+  padding: 2% 10% 0%;
+ }
+
+
+/* input.input-box, textarea { background: cyan; }  */
+ #footer form input, textarea {
+  background-color: #F7F7F7;
+
+}
+
+#right-brand{
+  text-align: right;
+}
+
+#footerbrand-color:hover{
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+#footerbrand-color{
+color:#FCFFE7;
+}
+
+#submit-color{
+  color:#000;
+}
+
+#submit-color:hover{
+background:#2C3639;
+color:#fff;
+}
+
+.contact-number{
+  text-align: right;
+}
+
+#contact-left{
+  text-align: left;
+}
+
+.horizonrtal{
+text-align: center;
+width: 5%;
+margin: 10px auto 0px;
+border-top: 5px dashed #fff;
+}
+
+/* #footer-contactstyle{
+  text-decoration: none;
+  list-style-type: none;
+} */
+/* Font-awesome */
+.fa-color{
+  color:#6F38C5;
+}
+
+#manage-footernavbar{
+  text-align: right;
+}
+
+.copyright{
+  /* width: 100%: */
+  padding-top: 1rem;
+  text-align: center;
+  font-size: x-small;
+  color:#D8D8D8;
+  /* padding-top: 5%; */
+}
+
+/* uploaded files styling */
+
+
+/* contact page */
+/*
+#greeting-contact{
+  font-family: 'Merriweather', serif;
+  text-align: left;
+  font-weight: bold;
+  font-size: 4em;
+  margin-left: 210px;
+} */
+
+#chooseone {
+  margin-left: 300px;
+  /* margin-right: 20%; */
+}
+
+
+
+
+.resources-section{
+  margin: 50px;
+}
+
+.notes_img{
+  margin-top: 3rem;
+  width:50%;
+  height: 50%;
+}
+
+.branchNotes-heading{
+
+  padding: 0 15px 15px;
+  text-align: center;
+  font-size: 4em;
+  font-weight: bold;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+
+
+
+.form-signin {
+  position: relative;
+  left:70%;
+  /* float:right; */
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; max-width: 330px;
+  padding: 15px;
+}
+
+
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.register-copyright{
+  margin:100px;
+}
+
+
+.content-heading{
+  color:#3C4048;
+}
+
+
+.cshadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.pdf-image {
+  width: 100px;
+  height: 105px;
+}
+.pdf-image:hover {
+  width: 110px;
+  opacity: 30%;
+}
+
+
+.cshadow:hover {
+  font-size: 20px;
+  display: block;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; max-width: 350px;
+}
+
+
+
+.resource-margin{
+  /* margin-left: 150px; */
+}
+
+.upload-size{
+  font-size: 4;
+}
+
+/* userprofile */
+.friend{
+  /* font-family: 'MonteCarlo', cursive; */
+  letter-spacing: 3px;
+   font-family: 'Merriweather', serif;
+   font-size: 2em;
+   padding: 0 10px 15px;
+   line-height: 1.5;
+   font-weight: bolder;
+}
+.friend p{
+font-family: 'MonteCarlo', cursive;
+}
+
+
+/* addprofile */
+.profile-margin{
+  /* margin-left: 150px; */
+}
+
+.addprofilediv {
+        height: 255px;
+        line-height: 255px;
+        text-align: center;
+    }
+
+.addprofile {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+
+.doundrline:hover {
+  text-decoration: underline;
+}
