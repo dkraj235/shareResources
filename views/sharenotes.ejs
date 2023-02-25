@@ -1,0 +1,71 @@
+ <%- include("partials/header") -%>
+
+ <section  >
+
+   <div class="row row-cols-1 row-cols-md-3 g-4">
+     <div class="col">
+
+     </div>
+
+     <div class="col col-mid-auto" >
+       <div class="row">
+           <div  id="shareNotes" class="card" style="width: 30rem;">
+             <div  class="card-header text-center">
+                <h2 id="sharednotes-heading ">Share  Notes</h2>
+             </div>
+             <form class="" action="/myresource" method="post" role="form" enctype='multipart/form-data'>
+                 <div class="input-group mb-3">
+                 <select class="form-select" name="semester" id="inputGroupSelect02" required>
+                   <option selected>Choose...</option>
+                   <option value="1">first</option>
+                   <option value="2">second</option>
+                   <option value="3">third</option>
+                   <option value="4">fourth</option>
+                   <option value="5">fifth</option>
+                   <option value="6">sixth</option>
+                 </select>
+                 <label class="input-group-text" for="inputGroupSelect02">semester</label>
+               </div>
+             <div class="w-100%">
+
+             </div>
+               <div class="input-group mb-3">
+               <select class="form-select" name="branch" id="inputGroupSelect02" required>
+                 <option selected>Choose...</option>
+                 <option value="cse">CSE</option>
+                 <option value="ele">Electrical</option>
+                 <option value="ece">Electronics</option>
+                 <option value="auto">Automobiles</option>
+                 <option value="mech">Mechanical</option>
+                 <option value="civil">Civil</option>
+               </select>
+               <label class="input-group-text" for="inputGroupSelect02">Branch</label>
+             </div>
+
+             <div class="input-group input-group-sm mb-3">
+               <span class="input-group-text"  id="inputGroup-sizing-sm">title</span>
+               <input type="text" name="title" class="form-control" autocomplete="off" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+                  <label class="input-group-text col-form-label" for="inputGroupSelect02"></label>
+             </div>
+
+             <div class="input-group mb-3">
+               <input type="file" class="form-control" name="pdffile" multiple id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" required></div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+             <button type="submit"  class="btn btn-lg btn-outline-dark align-left m-2" name="button">upload</button>
+             </div>
+             </form>
+
+              </div>
+       </div>
+     </div>
+
+     <div class="col">
+
+     </div>
+
+   </div>
+
+
+
+
+<%- include("partials/footer") -%>

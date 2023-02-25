@@ -1,0 +1,30 @@
+<%- include("partials/header") -%>
+<%- include("partials/chooseone") -%>
+<div class="container">
+<h1 class="branchNotes-heading">Automobiles</h1>
+
+<!-- <div class="row">
+  <div class="col-6">
+    <% allAutoFiles.forEach(function(autoFiles) {  %>
+        <h1> <%= autoFiles.fileTitle %> </h1>
+    <% }) %>
+  </div>
+</div> -->
+
+<section class="resource-margin" >
+<div class="row">
+    <% allAutoFiles.forEach(function(autoFiles) {  %>
+      <div class="card mb-5 mx-2 col-sm-6 cshadow" style="width: 18rem; background-color:#DDDDDD;">
+        <div class="card-body ">
+        <h5 class="card-title"><%= autoFiles.fileTitle %></h5>
+        <div class="">
+          <a href="/uploads/<%= autoFiles.pdf%>"><img style="border-radius:100%;" class="pdf-image" src="images/dilip.jpg" alt="pdf_image"></a>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+
+  </div>
+</section>
+
+<%- include("partials/footer") -%>
