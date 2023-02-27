@@ -334,7 +334,7 @@ app.post("/contactus", function(req, res) {
       console.log(newUserMessage);
     }else {
       console.log(err);
-    }ss
+    }
   })
   res.redirect("/");
 });
