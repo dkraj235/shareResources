@@ -1,25 +1,29 @@
-html {
-    min-height: 100%;
-    position: relative;
-  }
 
+  
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+/* ffont-family: 'Josefin Sans', sans-serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Libre Bodoni', serif;
+font-family: 'Lora', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Varela', sans-serif;
+*/
 
+}
 body{
+  background: linear-gradient(to bottom, #8d8787, #808080);  
+  /* height: 100vh; */
+    background-repeat: none;
     overflow-x: hidden;
     text-align: center;
-    /* background: #f8f9fa; */
-    background: transparent;
-    background-image: initial;
-    background-position-x: initial;
-    background-position-y: initial;
-    /* background-repeat-x: initial;
-    background-repeat-y: initial; */
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-size: initial;
-    background-color: #bdbdbd;
+    filter: brightness(100%);
 }
+
+
+
    /* font-family: 'MonteCarlo', cursive;
     font-family: 'Merriweather', serif;
 font-family: 'Ubuntu', sans-serif; */
@@ -27,115 +31,152 @@ font-family: 'Ubuntu', sans-serif; */
     font-family: 'Roboto', sans-serif;
 } */
 
-.container{
-  margin: auto;
-  padding: 0;
+
+.navbar{
+  padding: 0 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 90px;
+  width: 100vw;
+  
 }
 
-/* .container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
+.logo{
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
+  flex: 7;
+}
+
+.logoItems{
+ padding: 0 20px;
+ display: flex;
+ flex-direction: column; 
+}
+
+.logoItems:hover{
+  border: 2px solid #fff;
+  border-radius: 5px;
+  font-size: 2rem;
+  background-color: #808080;
+
+}
+
+.logoItems:hover{
+  color:#ffff;
+  cursor: pointer;
+}
+.textLogo{
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 2.5rem;
+  font-weight: 900;  
+  font-family: 'Libre Bodoni', serif;
+  
+}
+.sands:hover{
+  color:#fff;
+}
+.sands{
+  text-decoration: none;
+  color: #000;
+}
+
+.fullName{
+  text-align: center;
+  color: #0a0a0a;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  font-family: 'Libre Bodoni', serif;
+}
+
+
+/*Navbar Menu  */
+
+/* .upload{
+  padding: 5px;
 } */
 
-.navbar {
-    margin: 0;
-    padding: 0;
-    /* padding-bottom: 15px; */
-    border: 0;
-    border-radius: 0;
-    /* margin-bottom: 0; */
-    font-size: 12px;
-    letter-spacing: 5px;
+.navbarMenu{
+  flex: 5;
 }
 
-a:hover, a:active, a:visited, a:link{
-    text-decoration: none;
+.navbarMenu ul{
+  display: flex;
+  margin-left: 30px;
+}
+.navbarMenu ul li {
+  align-items: center;
+  list-style-type: none;
+  max-height: auto;
+}
+.menuItem:hover{ 
+   color: #fff; 
+  border-radius: 5px;
+  background-color: #808080; 
+}
+.menuItem{ 
+  padding: 10px ; 
+  text-decoration: none;
+  text-transform: uppercase;
+  color:#000; 
+  letter-spacing: 2px;
+  font-family: 'Libre Bodoni', serif;
+  font-size: 1.2rem;
+  font-weight: 400; 
 }
 
-.navbar-brand{
-    font-size: 4rem;
-    font-weight: bolder;
-    letter-spacing: 3px;
-    line-height: 1.5;
-
+.uploadfont{
+  font-family: 'Libre Bodoni', serif;
+  font-weight: 400; 
 }
 
-
-#brand-color{
-  /* font-family: 'MonteCarlo', cursive; */
-     font-weight: bolder;
-     color:#000;
-     /* border-radius: 3px; */
-     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-}
-  /* background: #fff;
-border-radius: 7px;
-box-shadow: 0 2px 5px #ccc;
-padding: 10px;
-width: 240px;
-margin: 16px;
-float: left; */
-  /* color:#2C3333; */
-
-
-#brand-paragraph{
-    font-size: 1rem;
-    color: #000;
-}
-#fbrand-paragraph{
-  font-size: 0.5rem;
-  color: #fff;
-}
+/* Carosoul   */
 
 .heading{
-    height: 150px;
-    font-family:  sans-serif;
-    color:#FAF8F1;
-    font-size: 3em;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    line-height: 1.5;
+  font-size: 2rem;
+  color: #d8d6d6;
+  width: fit-content;
+  block-size: fit-content;
+  font-weight: 600;
+  padding: 20px 10px 0px;
+  margin: auto auto;
+  width: 80%;
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  box-sizing: content-box;
 }
 
-#change-menucolor li a{
-
-  color:#434242;
-  font-weight: bold;
-  font-size: 1rem;
-  font-family: Roboto,Arial,sans-serif;
-}
-
-#change-menucolor li:first-child{
-  border-radius: 3px;
-  background-color:#EAEAEA;
-  opacity: 70%;
-  /* font-weight: bold; */
-
-}
-
-#change-menucolor li a:hover{
-  text-decoration: underline;
-  color:#222222;
-
-}
-
-/*Carrousol styling  */
-#carouselExample{
-  position: relative;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  border-radius: 3px;
-  /* box-shadow: 0 2px 5px #ccc; */
-  margin:0px 80px 0px;
-  background: #8d8d8d ;
-  /* border-color: 3f37c9 #566A6E; */
-}
-
-.home-image {
+.carosoulImages{
+  text-align: center;
+  margin: auto 40%;
   height: 180px;
-  border-radius: 100%;
-  margin: 10px;
-  z-index: 3;
+  max-width: 20%;
+  cursor: pointer;
+  filter: brightness(110%);
+  filter: blur(10%);
 }
+
+.carosolParent{
+  background: linear-gradient( to bottom, #808080, #333638);  
+  border-radius: 10px;
+  height: 300px;
+  margin: 100px 30px 50px; 
+  padding-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+
+}
+
+
+
+
+
+
+
 
 
 .find-resurces{
@@ -159,51 +200,91 @@ float: left; */
     border-top: 5px dashed #000 ;
 }
 
+
+ 
 /* Department */
 
-#department{
-  margin: 50px auto 0;
-  width: 80%;
-  text-align: center;
+.deparment{
+  margin: 50px 20px;
+}
+
+.departmentTitle{
+  margin: 40px 20px;
+  padding: 20px;
+  font-size: 4rem;
+  font-weight: 900;
+  font-family: 'Libre Bodoni', serif;
+  letter-spacing: 3px;
+  color: #333638;
 
 }
 
-.departmentclass{
-    margin-bottom: 20px;
-    padding:10px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
-}
-
-.department-heading{
-  /* background: #323232; */
-  color:#323232;
-  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-  text-align:center;
-  font-size: 5em;
-  line-height: 2;
-  letter-spacing:3px;
-}
-
-.department-image{
-  margin-bottom: 50px;
-  width:220px;
-  height: 220px;
-  border-radius:12%;
-}
-
-.deparment-text{
-  text-align: left;
-  color:#000;
-  font-family: 'Merriweather', serif;
+.departmentItemsTitles{
+  margin: 40px 20px;
+  min-height: 2rem;
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif; 
+  letter-spacing: 2px;
+  color: #c3c0c0;
+  font-family: 'Libre Baskerville', serif;
+/* font-family: 'Lora', serif; */
 
 }
+.dpttitles:hover{
+  color: #333638;
+  padding: 0;
+  font-size: 1.5rem;
+  
 
+}
+ 
 
+.dptItems{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.departmentItems{
+  margin: 50px 20px; 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.deparmentImg{
+  width: 100%; 
+}
+ 
+.departmentCt{
+  width: 50%;
+  text-align: left;  
+  font-family: 'Lora', serif; 
+}
+.departmentCt:hover{
+  width: 60%;
+
+}
+.cseimg{ 
+ border-radius: 5px;
+ height: 200px;
+ width: 200px;
+} 
+.cseimg:hover{
+  width: 225px;
+}
+.dpttitles{
+  text-decoration: none;
+  color: #fff;
+}
+ 
+ 
 /* Contact us */
   /* top right-left bottom */
-
-
+ 
 #sharednotes-heading{
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
   font-family: 'Roboto', sans-serif;
@@ -322,21 +403,7 @@ border-top: 5px dashed #fff;
   color:#D8D8D8;
 }
 
-
-
-
 /* uploaded files styling */
-
-
-/* contact page */
-
-
-/* #chooseone {
-  margin-left: 20%;
-} */
-
-
-
 
 .resources-section{
   margin: 50px;
@@ -421,9 +488,6 @@ border-top: 5px dashed #fff;
 
 
 
-.upload-size{
-  font-size: 4;
-}
 
 /* userprofile */
 .friend{
@@ -469,6 +533,15 @@ font-family: 'MonteCarlo', cursive;
   text-align: left;
   background-color: #ccc;
 }
+
+
+
+
+
+
+
+/* -------------------------------------------Responsiveness--------------------------------------------------------------------- */
+
 
 /* desktop and laptop */
 @media only screen 
@@ -524,11 +597,7 @@ and (max-device-width : 480px){
     line-height: 1.5;
 }
 
-  .container{
-    margin-left:20px;
-    padding: 0;
-  } */
-  
+
  .navbar-brand{
 
   font-size: 3rem;
@@ -558,7 +627,7 @@ and (max-device-width : 480px){
 #department{
   margin: auto;
   text-align: center;
-  width: 90%;
+  width: 100%;
 
 }
 .department-heading{
@@ -566,7 +635,7 @@ and (max-device-width : 480px){
 }
  .department-image{
   margin-bottom: 50px;
-  margin-right:10px;
+  /* margin-right:10px; */
   width:90%;
   height: 200px;
   /* border-radius:12%; */
@@ -625,6 +694,7 @@ and (max-device-width : 1024px) {
   .form-signin {
     margin: 10% 0% 29%;
     left:50%;
+    
   }
 
   .profile-margin{
@@ -653,7 +723,5 @@ and (orientation : landscape) {
   .profile-margin{
     margin-left: 0px;
   }
-  
-
 
 }
