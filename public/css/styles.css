@@ -1,9 +1,12 @@
-
-  
+ 
+ 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;  
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
 /* ffont-family: 'Josefin Sans', sans-serif;
 font-family: 'Libre Baskerville', serif;
 font-family: 'Libre Bodoni', serif;
@@ -14,12 +17,11 @@ font-family: 'Varela', sans-serif;
 
 }
 body{
-  background: linear-gradient(to bottom, #8d8787, #808080);  
-  /* height: 100vh; */
+    min-width: 100%;
+    background: linear-gradient(to bottom, #8d8787, #808080);   
     background-repeat: none;
     overflow-x: hidden;
-    text-align: center;
-    filter: brightness(100%);
+    text-align: center; 
 }
 
 
@@ -29,7 +31,7 @@ body{
 font-family: 'Ubuntu', sans-serif; */
     /* font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
-} */
+ */
 
 
 .navbar{
@@ -38,7 +40,7 @@ font-family: 'Ubuntu', sans-serif; */
   justify-content: flex-start;
   align-items: center;
   height: 90px;
-  width: 100vw;
+  width: 100%;
   
 }
 
@@ -157,8 +159,7 @@ font-family: 'Ubuntu', sans-serif; */
   height: 180px;
   max-width: 20%;
   cursor: pointer;
-  filter: brightness(110%);
-  filter: blur(10%);
+  filter: brightness(110%); 
 }
 
 .carosolParent{
@@ -194,10 +195,12 @@ font-family: 'Ubuntu', sans-serif; */
 /* horizontal line */
 
 .f-horizonrtal{
-   margin: 100px auto 0px;
-    width: 5%;
+    margin: 50px auto 20px;
+    width: 3%;
+    font-weight: 900;
     text-align: center;
-    border-top: 5px dashed #000 ;
+    border-top: 5px dashed #000000 ;
+    display: none;
 }
 
 
@@ -534,25 +537,126 @@ font-family: 'MonteCarlo', cursive;
   background-color: #ccc;
 }
 
-
-
-
-
-
+ 
 
 /* -------------------------------------------Responsiveness--------------------------------------------------------------------- */
 
+  
 
-/* desktop and laptop */
-@media only screen 
-and (min-width : 1024px) {
-  #carouselExample {
-    margin: 20px 0 0 0;
-    width: 100%;
-  }
-}
 
 /* smartphone landscape screen */
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+/* @media (min-width: 320px) and (max-width: 480px) {
+  
+  
+} */
+@media (min-device-width : 320px) and (max-device-width : 670px){
+ 
+ 
+  .navbar{
+    margin-top: 10px;
+    padding: 0px 20px;
+  }
+ 
+.logo{
+  flex: 2;
+}
+
+.logoItems{
+  padding: 0px; 
+ }
+ 
+.navbarMenu{
+  display: none; 
+}
+.carosoulImages{ 
+  margin: auto 10%; 
+  max-width: 80%;   
+}
+.heading{
+  display: none;
+}
+
+.carosolParent{
+  padding-top: 20%;  
+  padding: 50px;
+  height: 250px;
+  margin: 50px 10px 50px;   
+
+}
+
+.f-horizonrtal{ 
+  width: 10%; 
+}
+
+/* Deparments */
+
+ 
+.departmentTitle{
+  margin: 40px 20px;
+  padding: 20px;
+  font-size: 2.85rem; 
+  letter-spacing: 2px;  
+
+}
+
+.departmentItemsTitles{
+  margin: 10px 10px;  
+  font-size: 2.1rem;
+
+}
+  
+.departmentItems{ 
+  flex-direction: column;  
+}
+   
+.deparmentImg{
+  width: 100%; 
+}
+ 
+ 
+.departmentCt{
+  width: 90%; 
+}
+.departmentCt:hover{
+  width: 95%;
+}
+.cseimg{  
+ width: 250px;
+} 
+
+.cseimg:hover{
+  width: 245px;
+}
+.dpttitles{ 
+  text-decoration: none;
+  color: #fff;
+}
+ 
+/* 
+#items { order: 2 }
+#logo { order: 1 }
+#picture { display: none; } */
+
+.imagef1{
+  order: 1;
+}
+
+.contentbelow1{
+    order: 2;
+}
+
+
+
+
+}
+
+
 
 @media only screen and (min-device-width: 480px) 
                    and (max-device-width: 640px) 
@@ -574,111 +678,16 @@ and (min-width : 1024px) {
 
 
 
-/* @media  screen and (max-width: 600px)  */
-/* smartphone landscape and portrait  */
+
+/* desktop and laptop */
 @media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px){
+and (min-width : 1024px) {
   #carouselExample {
-    margin: 30px 0 0 20px;
-    width: 90%;
+    margin: 20px 0 0 0;
+    width: 100%;
   }
-
-  .home-image {
-    /* height: 180px; */
-    /* border-radius: 100%; */
-    padding: 10px;
-    height: 200px;
-    /* z-index: 3; */
-  }
-  .heading{
-    font-size: 2em;
-    letter-spacing: 2px;
-    line-height: 1.5;
 }
-
-
- .navbar-brand{
-
-  font-size: 3rem;
-  letter-spacing: 2px;
-  line-height: 1.25;
-}
-
-#brand-color{
-  margin-top: 20px;
-  padding: 20px 0 0 40px;
-  /* padding-top: 20px;
-  padding-left: 15px; */
-}
-
-#change-menucolor li a{
-  padding-left: 1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 20px;
-}
-#change-menucolor li:first-child{
-  color:#000;
-  opacity: 100%;
-  background-color:#bdbdbd;
-
-}
-
-#department{
-  margin: auto;
-  text-align: center;
-  width: 100%;
-
-}
-.department-heading{
-  font-size: 3em;
-}
- .department-image{
-  margin-bottom: 50px;
-  /* margin-right:10px; */
-  width:90%;
-  height: 200px;
-  /* border-radius:12%; */
-}
-
-.deparment-text{
-  margin-right:5px;
-  width:90%;
-}
-
-/* footer mobile  */
-.footer-nav{
-  margin-left: 0%;
-}
-
-#chooseone {
-  margin-top: 5%;
-  margin-left: 0%;
-  margin-right: 0%;
-}
-
-#allresources-mobile{
-  margin-left: 0%;
-}
-.resource-card{
-  width: 10rem;
-  background-color:#DDDDDD;
-}
-
-.form-signin {
-  margin: 10% 0% 0;
-  left:5%;
-}
-
-.profile-margin{
-  margin-left: 12%;
-}
-
-
-
-}
-
-
+ 
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen 
