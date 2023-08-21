@@ -1,5 +1,24 @@
  <%- include("partials/header") -%>
 
+ <style>
+  #shareNotes{
+    margin: 30px 0px;
+    padding: 20px;
+    background-color: initial;
+    color: #fff;
+    
+    font-family: 'Varela', sans-serif;
+
+  }
+  select option{
+    height: 50px;
+  }
+  .form-select, .inputTitle{
+    border-bottom: 1px solid #5b5a5a;
+    height: 50px;
+  }
+ </style>
+
  <section  >
 
    <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -17,12 +36,12 @@
                  <div class="input-group mb-3">
                  <select class="form-select" name="semester" id="inputGroupSelect02" required>
                    <option selected>Choose...</option>
-                   <option value="1">first</option>
-                   <option value="2">second</option>
-                   <option value="3">third</option>
-                   <option value="4">fourth</option>
-                   <option value="5">fifth</option>
-                   <option value="6">sixth</option>
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                   <option value="5">5</option>
+                   <option value="6">6</option>
                  </select>
                  <label class="input-group-text" for="inputGroupSelect02">semester</label>
                </div>
@@ -43,15 +62,15 @@
              </div>
 
              <div class="input-group input-group-sm mb-3">
-               <span class="input-group-text"  id="inputGroup-sizing-sm">title</span>
-               <input type="text" name="title" class="form-control" autocomplete="off" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+               <span class="input-group-text"  id="inputGroup-sizing-sm">Title</span>
+               <input  type="text" name="title" class="form-control inputTitle" autocomplete="off" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
                   <label class="input-group-text col-form-label" for="inputGroupSelect02"></label>
              </div>
 
              <div class="input-group mb-3">
-               <input type="file" class="form-control" name="pdffile" multiple id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" required></div>
+               <input type="file" class="form-control inputTitle" name="pdffile" multiple id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" required></div>
             <div class="d-grid gap-2 col-6 mx-auto">
-             <button type="submit"  class="btn btn-lg btn-outline-dark align-left m-2" name="button">upload</button>
+             <button type="submit"  class="btn btn-lg btn-outline-light align-left m-2" name="button">upload</button>
              </div>
              </form>
 

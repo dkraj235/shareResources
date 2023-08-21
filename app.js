@@ -10,6 +10,7 @@ const md5 = require("md5");
 const session  = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
+const { log } = require("console");
 const app = express();
 mongoose.set('strictQuery', false);
 app.set('view engine', 'ejs');
@@ -175,29 +176,52 @@ app.post("/register", function(req, res) {
         res.redirect("/sharenotes");
       });
     }
-  });
-
-
+  });  
      });
+ 
 
-app.post("/login", function(req, res) {
-
-  const user = new User({
-    userName: req.body.username,
-    userPassword: req.body.password
-  });
-
-  req.login(user, function(err) {
-    if(err) {
-      console.log(err);
-    } else {
-      passport.authenticate("local") (req, res, function() {
-        res.redirect("/sharenotes");
-      });
+app.post("/login", function(req, res, next) {
+  passport.authenticate("local", function(err, user, info) {
+    if (err) {
+      // Handle error
+      return res.render("errorPage", { errorMessage: "An error occurred." });
     }
+    if (!user) {
+      // No user found (incorrect password)
+      return res.render("thankyou", { errorMessage: "Incorrect password. Please try again." });
+    }
+    
+    // If user is authenticated, log in and redirect to the desired page
+    req.logIn(user, function(err) {
+      if (err) {
+        return res.render("errorPage", { errorMessage: "An error occurred." });
+      }
+      return res.redirect("/sharenotes"); // Successful login, redirect to sharenotes page
+    });
+  })(req, res, next);
+});
 
-  })
-  });
+
+// app.post("/login", function(req, res) {
+
+//   const user = new User({
+//     userName: req.body.username,
+//     userPassword: req.body.password
+//   });
+
+//   req.login(user, function(err) {
+//     if(err) {
+//       res.render(err);
+//     } 
+
+//     else {
+//       passport.authenticate("local") (req, res, function() {
+//         res.redirect("/sharenotes");
+//       });
+//     }
+
+//   })
+//   });
 
 
 app.get("/resources", function(req, res){
@@ -262,22 +286,30 @@ app.get("/ece", function(req, res){
 
 app.get("/mech", function(req, res){
   Resource.find({branch:"mech"}, function(err, mechFiles){
-    if(mechFiles) {
-      res.render("mech", {allMechFiles: mechFiles});
-      // console.log(cseFiles);
+    if (err) {
+      console.error(err); // Log the error
+      return res.status(500).send("An error occurred");
+    }
+    if( mechFiles === 0) {
+      console.log("No mech files found");
+       res.render("thankyou");
     } else {
-      console.log(err);
+      res.render("mech", {allMechFiles: mechFiles}); 
     }
   });
 });
 
 app.get("/auto", function(req, res){
   Resource.find({branch:"auto"}, function(err, autoFiles){
-    if(autoFiles) {
-      res.render("auto", {allAutoFiles: autoFiles});
+    if (err) {
+      console.error(err); // Log the error
+      return res.status(500).send("An error occurred");
+    }
+    if(!autoFiles|| autoFiles === 0) {
+      return res.render("thankyou");
       // console.log(cseFiles);
     } else {
-      console.log(err);
+      res.render("auto", {allAutoFiles: autoFiles});
     }
   });
 });
@@ -309,6 +341,7 @@ fileTitle:requestTitle,
 pdf:requestFile
 });
 
+
 // return res.json({status:"ok", uploaded:req.files.length});
 newResource.save(function(err) {
   if(!err) {
@@ -318,7 +351,7 @@ newResource.save(function(err) {
 }
 });
 // res.redirect("/");
-res.render("uploaded");
+res.render("uploaded", {yourBarnch: requestBranch})
 });
 
 
@@ -334,7 +367,7 @@ app.post("/contactus", function(req, res) {
       console.log(newUserMessage);
     }else {
       console.log(err);
-    }ss
+    }
   })
   res.redirect("/");
 

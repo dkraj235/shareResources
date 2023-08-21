@@ -1,31 +1,87 @@
 <%- include("partials/header") -%>
 
-<h2 class="friend mb-5 my-3">Make Cotact With Your Colleagues</h2>
-<section class="profile-margin">
-  <div class="row ">
-    <div class="card mb-5 mx-3 col-mid-3 col-sm-4 addprofilediv cshadow" style="width: 18rem; background:#ccc;">
 
-      <a  style="text-decoration: none; color:#000;" href="/createnewcollegue"><span class="addprofile"><i class="fa-circle-plus  fa-solid fa-plus fa-5x"></i></span></a>
-    
-      </div>
+<style>
+  .collegueHeading{
+    font-size: 3rem; 
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+  }
+  p, a{
+    margin: 0;padding: 0;
+  }
+.card{
+   width: 18rem;
+   margin: 20px;
+   overflow: hidden;
+   box-shadow: 5px 5px 5px 5px #000;
+   border-radius: 0.5rem;
+  }
 
-  <% allCollegues.forEach(function(collegue) { %>
-    <div id="imagestyle" class="card col-mid-3 col-sm-4 mb-5 p-4 mx-3 " >
-      <div class="mb-1 " style=" text-align:center;" >
-        <img class="mb-2 mt-2" style= "height:100px; border-radius:100%; width:100px;" src="./uploads/<%=collegue.collegueimg%>" alt="uploaded_images">
+.addNewItem{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #000;
+   letter-spacing: 2px;
+  }
+
+ 
+.allCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+.fontstyle{
+  color: #000;
+  font-size: 4rem;
+}  
+.card_body{
+  box-shadow: 5px 5px 5px 5px #000;
+  border-bottom-right-radius: 5px ;
+  border-bottom-left-radius: 5px; 
+  text-align: left;
+  font-family: "Poppins", Helvertica, sans-serif;
+}
+
+.card .card_body {
+  padding: 2rem;
+}
+.card_title {
+  font-size: 1em;
+  margin: 0;
+  color: black;
+}
+.card-img {
+  height: 15rem;
+  background-size: cover;
+  background-position: center center;
+  border-top-right-radius: 5px ;
+  border-top-left-radius: 5px;
+}
+
+</style>
+
+<h2 class="collegueHeading">Be Connect With Your Colleagues</h2>
+
+  <div class="allCard">
+ 
+    <div class="card addNewItem">
+       <a  href="/createnewcollegue"><span class="addprofile"><i   class="fa-circle-plus  fa-solid fa-plus fontstyle"> <br><p class="mt-3">Add</p></i></span></a>
     </div>
-    <strong style="font-size:1em;" class="title"> <span>Name : </span><%= collegue.colleguename %> </strong>
-    <p class="card-title" ><span>Session : </span><%= collegue.colleguesession %></p>
-    <p class="card-text"><span>College : </span><%= collegue.colleguecollege %></p> %>
-<a class="mb-2" style="text-decoration:none ; color:#fff; font-family:Merriweather"  href="<%= collegue.colleguecontacturl %>"><button class="btn btn-dark">See Profile</button></a>
-    </div>
+ 
+    <% allCollegues.forEach(function(collegue) { %>
+    <div class="card">
+         <img class="card-img"  src="./uploads/<%=collegue.collegueimg%>" alt="uploaded_images">
+       <div class="card_body">
+          <strong   class="card_title"> <span>Name : </span><%= collegue.colleguename %> </strong>
+          <p ><span>Session : </span><%= collegue.colleguesession %></p>
+          <p ><span>College : </span><%= collegue.colleguecollege %></p> %>
+          <a href="<%= collegue.colleguecontacturl %>"><button class="btn btn-dark mt-2">Connect</button></a>
+       </div>
+       </div>
   <% })  %>
-
-
-
+ 
   </div>
-
-<!-- fa-circle-plus -->
-
-
-</section>
+  
+  <%- include("partials/footer") -%>

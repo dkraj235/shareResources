@@ -1,27 +1,23 @@
 <%- include('partials/header') %>
 
-<section id="form-login" style="background-color:#f5f5f5;" class="form-signin">
-  <h1>Login</h1>
-      <div class="card">
+<section  style="background-color:#f5f5f5;" class="form-signin">
+  <h1 class="docenter">Login</h1> 
 
-        <div class="card-body">
-          <!-- Makes POST request to /login route -->
-          <form action="/login" method="POST">
-                <div class="form-floating">
-              <input type="email" class="form-control" name="username" placeholder="email" required>
+          <form action="/login" method="POST"> 
+            <div class="form-floating">
+              <input type="email" class="form-control" name="username" placeholder="example@gmail.com" required>
                 <label for="email">Email</label>
             </div>
             <div class="form-floating">
               <input type="password" class="form-control" name="password" placeholder="password" required>
               <label for="password">Password</label>
             </div>
-            <button type="submit" class="w-100 btn-lg btn btn-outline-dark">Login</button>
+             <button type="submit" class="w-100 btn-lg btn btn-outline-dark">Login</button>
           </form>
-        </div>
-    </div>
-<div class=" mb-3">
+    
+ 
+<div class=" m-3">
   <p>New user? <a href="/register">Create an account</a></p>
-
 </div>
 
 </section>
