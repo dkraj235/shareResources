@@ -7,11 +7,11 @@
 <section class="resource-margin" >
 <div class="row deskRow mobilerow">
     <% allMechFiles.forEach(function(mechFiles) {  %>
-      <div class="card mb-5 mx-2 col-sm-6 cshadow" style="width: 18rem; background-color:#DDDDDD;">
+      <div class="card  cshadow"  >
         <div class="card-body ">
         <h5 class="card-title"><%= mechFiles.fileTitle %></h5>
         <div class="">
-          <a href="/uploads/<%= mechFiles.pdf%>"><img style="border-radius:100%;"  class="pdf-image" src="images/dilip.jpg" alt="pdf_image"></a>
+          <a href="/uploads/<%= mechFiles.pdf%>"><img    class="pdf-image" src="images/dilip.jpg" alt="pdf_image"></a>
         </div>
       </div>
     </div>
@@ -22,4 +22,4 @@
 
 
 
- 
+<%- include("partials/footer") -%>

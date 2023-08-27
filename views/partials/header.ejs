@@ -22,43 +22,47 @@
      <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--  bootstrap script  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
  
 
   </head>
 
-
-  <div class="navbar">
+  <div id="desk" class="navbar">
     <div class="logo">
       <div class="logoItems">
-         <span class="textLogo"><a class="sands" href="/">SAndS</a></span>
-         <span class="fullName">share and study</span>
-     </div>
-    
+        <span class="textLogo"><a class="sands" href="/">SAndS</a></span>
+        <span class="fullName">share and study</span>
+      </div> 
+    </div> 
+
+
+ <div class="navbarMenu mob_none">
+  <ul>
+      <li><a class="menuItem" href="/">Home</a></li>
+      <li><a class="menuItem" href="/resources">Resource</a></li>
+      <li><a class="menuItem" href="/login"><i class="fa-solid fa-blue fa-cloud-arrow-up"></i> Upload</a></li>
+      <li><a class="menuItem" href="/collegues">Collegues</a></li>
+  </ul>
  </div>
 
- <!-- <div class="navbarMenu">
-     <ul>
-         <li><a class="menuItem" href="#">Home</a></li>
-         <li><a class="menuItem" href="#">Resource</a></li>
-         <li><a class="menuItem" href="#"><i class="fa-solid fa-blue fa-cloud-arrow-up"></i> Upload</a></li>
-         <li><a class="menuItem" href="#">Collegues</a></li>
-     </ul>
- </div> -->
 
-
-
-
-<span class="open" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa-solid menuSize fa-bars"></i></span>
-<div id="mySidenav" class="sidenav">
- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
- <li><a class="menuItem" href="/">Home</a></li>
- <li><a class="menuItem" href="/resources">Resource</a></li>
- <li><a class="menuItem" href="/login"><i class="fa-solid fa-blue fa-cloud-arrow-up"></i> Upload</a></li>
- <li><a class="menuItem" href="/collegues">Collegues</a></li>
+ 
+<span class="open desk_none" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa-solid menuSize fa-bars"></i></span>
+<div id="mySidenav" class="sidenav desk_none">
+   <a   href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a  class="menuItem menuMargin" href="/">Home</a>
+   <a class="menuItem" href="/resources">Resource</a>
+  <a class="menuItem" href="/login"><i class="fa-solid fa-blue fa-cloud-arrow-up"></i> Upload</a>
+  <a class="menuItem" href="/collegues">Collegues</a>
 </div>
+   
 </div>
+
+
+
+
+ 
+
 
 
 
@@ -76,7 +80,8 @@
       </script>
   
 
-   
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
 
 
 
