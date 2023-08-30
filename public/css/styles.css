@@ -221,12 +221,14 @@ body{
 .carosoulImages{
   text-align: center;
   margin: auto 40%;
-  height: 180px;
+  height: 200px;
+  padding: 10px;
   max-width: 20%;
   cursor: pointer;
   filter: brightness(110%); 
   
 }
+ 
 .carosoulImages:hover{
   filter: hue-rotate(45deg);
 }
@@ -234,12 +236,24 @@ body{
 .carosolParent{
   background: linear-gradient( to bottom, #95a5a6  , #34495e  );  
   border-radius: 10px;
-  height: 400px;
-  margin: 100px 30px 50px; 
-  padding-top: 30px;
+  height: 370px;
+  margin: 100px 20px 50px;
+  padding-top: 40px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
 
 } 
+.smallSize{
+  font-size: 0.5rem;
+}
+ 
+.ccpcolor{
+  background-color: none;
+ 
+}
+.ccpcolor:hover{
+ background-color: inherit;
+}
+
 
 
 .find-resurces{
@@ -280,7 +294,7 @@ body{
   font-weight: 900;
   font-family: 'Libre Bodoni', serif;
   letter-spacing: 3px;
-  color: #333638;
+  color: #34495e;
 
 }
 .departmentTitle:hover{
@@ -296,13 +310,17 @@ body{
   font-weight: 600;
   font-family: 'Roboto', sans-serif; 
   letter-spacing: 2px;
-  color: #c3c0c0;
+  color: #fff;
   font-family: 'Libre Baskerville', serif;
-/* font-family: 'Lora', serif; */
-
+   
 }
+
+.departmentItemsTitles:hover{
+  animation: pulse 1.5s infinite; 
+}
+
 .dpttitles:hover{
-  color: #000;
+  color: #34495e;
   padding: 0;
   filter: drop-shadow(10px 10px 20px #000);
 }
@@ -348,6 +366,11 @@ body{
 .dpttitles{
   text-decoration: none;
   color: #fff;
+ 
+}
+@keyframes pulse {
+  0%, 90% { transform: scale(1); }
+  50% { transform: scale(1.1); }
 }
  
  
@@ -380,13 +403,7 @@ body{
    font-family: 'Ubuntu', sans-serif;
  }
 
- .ccpcolor{
-   background-color: none;
- }
- .ccpcolor:hover{
-  background-color: inherit;
-}
-
+ 
  /* deopdown for branch */
 
  #dropdown-text{
@@ -424,22 +441,18 @@ body{
 }
 
  /* Footer */
-  .parentChooseOne{
-    margin-top: 25px;
-    position: relative;
-   
-    width: 100%;
-    background-color: #000;
-  }
+  
  
 .chooseOne {
   right: 10%;
   z-index: 2;
   display: inline-block;
-  /* position: relative; */
+  margin-top: 10px;
   position: absolute;
 
 }
+
+ 
 
 button{
   border:none;
@@ -678,7 +691,7 @@ font-family: 'MonteCarlo', cursive;
 /* rsources */
 .deskRow{
   margin-left: 20px;
-  margin-top: 60px;
+  margin-top: 70px;
 }
  
 

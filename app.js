@@ -138,7 +138,11 @@ const uploadpdfimg = multer({ storage: storage }).single('pdffile');
 
 app.get("/", function(req, res){
    res.render("home");
+  // res.render("eduflix");
+
+
 });
+
 
 app.get("/sharenotes", function(req, res) {
   if(req.isAuthenticated()){
