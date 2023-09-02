@@ -2,10 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser")
 const ejs = require('ejs');
 const multer  = require('multer') ;
-const  mongoose = require("mongoose");
-// const pdfkit = require("pdfkit")
-const path = require('path');
-// const fs = require("fs");
+const  mongoose = require("mongoose"); 
+const path = require('path'); 
 const md5 = require("md5");
 const session  = require("express-session");
 const passport = require("passport");
@@ -18,8 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname + '/public'));
 
-// mongoose.connect("mongodb://0.0.0.0:27017/rscDB");
-
+ 
 
 app.use(session({
   secret: "ALl secret of the UNIVERSE",
@@ -29,6 +26,10 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+
+// import index.js file
+
 
 mongoose.set('strictQuery', false);
 mongoose.connect("mongodb+srv://admin-dilip:dilip123@cluster0.nwdwxrb.mongodb.net/shareDB",
@@ -136,12 +137,19 @@ const uploadpdfimg = multer({ storage: storage }).single('pdffile');
 // testing
 
 
+
+ 
+ 
+
+
 app.get("/", function(req, res){
    res.render("home");
-  // res.render("eduflix");
+ 
+  // {allCollegues: foundCollugues});
 
 
 });
+
 
 
 app.get("/sharenotes", function(req, res) {
