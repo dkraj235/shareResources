@@ -19,34 +19,7 @@ body{
     filter: brightness(100%);
 }
 
-.efuflix{
-  text-decoration: none;
-  color: #95a5a6; 
-}
 
-.efuflix:hover{
-   color: #b2070a;
-}
-/* CSS for the visit_efuflix text logo */
-.visit_efuflix {
-  margin-left: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Set your desired font-family */
-  font-size: 24px;
-  font-weight: bold;  
-  text-transform: uppercase;  
-  letter-spacing: 2px; 
-  animation: pulse 1.5s infinite; 
-   
-}
-.visit_efuflix:hover{ 
-  text-decoration: underline;
-  color:#fff;
- 
-}
- 
 .mob_none{
   display: block;
 }
@@ -210,8 +183,10 @@ body{
 }
 .menuItem:hover{ 
    color: #fff; 
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: #95a5a6  ; 
+  animation: pulse 1.5s infinite; 
+  
 }
 .menuItem{ 
   padding: 10px ; 
@@ -458,13 +433,14 @@ body{
 
 .btn{
   color:#fff;
-  background-color: #34495e;
+  background-color: #000;
 }
 
 .btn:hover{ 
-  color: #fff;
-  background-color: #34495e ;
-  border: 2px solid #95a5a6;
+  animation: pulse 1.5s infinite; 
+  color: #000;
+  background-color: #fff ;
+  border: 2px solid #000;
 }
 
  /* Footer */
@@ -481,6 +457,10 @@ body{
 
 .card-body{
   border-radius: 0% ;
+}
+
+.card-body:hover{
+  animation: pulse 1.5s infinite; 
 }
  
 

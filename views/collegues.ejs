@@ -32,7 +32,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-.fontstyle{
+.fontstyle{ 
   color: #000;
   font-size: 4rem;
 }  
@@ -47,18 +47,29 @@
 .card .card_body {
   padding: 2rem;
 }
+.card_title:hover, .card:hover , .card_body:hover{
+  color:#fff;
+}
 .card_title {
   font-size: 1em;
-  margin: 0;
-  color: black;
+  margin: 0; 
 }
-.card-img {
-  height: 15rem;
+.card_imgflex{
+  display: flex;
+  justify-content: center;
+  
+}
+.card-img { 
+   height: 105px;
+  width: 105px;
+  margin-bottom: 10px; 
   background-size: cover;
   background-position: center center;
-  border-top-right-radius: 5px ;
-  border-top-left-radius: 5px;
+  border-radius: 100%;
+  border: 2px solid #fff;
 }
+
+
 
 </style>
 
@@ -72,12 +83,16 @@
  
     <% allCollegues.forEach(function(collegue) { %>
     <div class="card">
-         <img class="card-img"  src="./uploads/<%=collegue.collegueimg%>" alt="uploaded_images">
+     
        <div class="card_body">
+        <div class="card_imgflex">
+          <img class="card-img"  src="./uploads/<%=collegue.collegueimg%>" alt="uploaded_images">
+  
+        </div>
           <strong   class="card_title"> <span>Name : </span><%= collegue.colleguename %> </strong>
           <p ><span>Session : </span><%= collegue.colleguesession %></p>
           <p ><span>College : </span><%= collegue.colleguecollege %></p> %>
-          <a href="<%= collegue.colleguecontacturl %>"><button class="btn btn-dark mt-2">Connect</button></a>
+          <a href="<%= collegue.colleguecontacturl %>"><button class="btn   mt-2">Connect</button></a>
        </div>
        </div>
   <% })  %>
