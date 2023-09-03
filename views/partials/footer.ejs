@@ -5,7 +5,8 @@
      <div class="contactUs">
         <h5 class="contactTitle">Contact us</h5> 
         <input type="email" name="de" placeholder="Email" required> 
-        <textarea name="dm" rows="3" cols="21" placeholder="message" required></textarea>
+        <textarea name="dm" id="message" rows="3" cols="21" placeholder="message" required></textarea>
+        <div class="limitChar" id="char-count">Characters remaining: 100</div>
         <button   id="submit-color" class="btn  btn-light  " type="submit" name="button">submit</button>
       </div> 
     </form>
@@ -27,3 +28,22 @@
  <p class="copyright mb-0" >© 2023 Copyright:All rights reserved <span style="font-size: 1rem; color:white;"> <a style=" color:white;" href="/">SAndS</a></span></p>
  
 </div>
+
+
+<script>
+  const input = document.getElementById('message');
+  const charCount = document.getElementById('char-count');
+  const maxChars = 100; // Set your desired character limit here
+
+  input.addEventListener('input', function () {
+      const currentChars = input.value.length;
+      const remainingChars = maxChars - currentChars;
+
+      if (remainingChars >= 0) {
+          charCount.textContent = `Characters remaining: ${remainingChars}`;
+      } else {
+          // If the user exceeds the limit, truncate the input value
+          input.value = input.value.substring(0, maxChars);
+      }
+  });
+</script>

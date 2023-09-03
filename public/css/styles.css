@@ -426,7 +426,15 @@ body{
  background-color: #F7F7F7;
 
 }
+.message:hover,.limitChar:hover{
+  
+    display: block;
+  
 
+}
+.limitChar{
+  color: #f0eded33; 
+}
 #contact form input, textarea{
    background-color: #F7F7F7;
 }
