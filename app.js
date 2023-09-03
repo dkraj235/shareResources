@@ -1,23 +1,21 @@
+require('dotenv').config({path:__dirname+'/.env'});
 const express = require("express");
 const bodyParser = require("body-parser")
 const ejs = require('ejs');
 const multer  = require('multer') ;
 const  mongoose = require("mongoose"); 
-const path = require('path'); 
-const md5 = require("md5");
+const path = require('path');   
 const session  = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
-const { log } = require("console");
+const DATABASE = process.env.DATABASE;
+const PORT = process.env.PORT || 3000;
 const app = express();
 mongoose.set('strictQuery', false);
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname + '/public'));
-
- 
-
 app.use(session({
   secret: "ALl secret of the UNIVERSE",
   resave: false,
@@ -32,14 +30,11 @@ app.use(passport.session());
 
 
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb+srv://admin-dilip:dilip123@cluster0.nwdwxrb.mongodb.net/shareDB",
+mongoose.connect(DATABASE,
  {
     useNewUrlParser: true,
     useUnifiedTopology: true
- });
-// mongodb://127.0.0.1:27017/rscDB
-
-// mongoose.connect("mongodb://0.0.0.0:27017/userDB");
+ }); 
 
 
 const userSchema =new  mongoose.Schema({
@@ -63,6 +58,8 @@ passport.serializeUser(function(user, done) {
 passport.deserializeUser(function(user, done) {
   done(null, user);
 });
+
+
 
 const collegueSchema = new mongoose.Schema({
   colleguename: {
@@ -135,19 +132,11 @@ const upload = multer({ storage: storage }).single('collegueimg');
 const uploadpdfimg = multer({ storage: storage }).single('pdffile');
 
 // testing
-
-
-
- 
  
 
 
 app.get("/", function(req, res){
-   res.render("home");
- 
-  // {allCollegues: foundCollugues});
-
-
+   res.render("home"); 
 });
 
 
@@ -160,9 +149,13 @@ app.get("/sharenotes", function(req, res) {
   }
 });
 
+
+
 app.get("/register", function(req, res) {
  res.render("register");
 });
+
+ 
 
 app.get("/login", function(req, res) {
   res.render("login");
@@ -179,62 +172,41 @@ app.post("/logout", function(req, res) {
 });
 
 app.post("/register", function(req, res) {
-  User.register({username: req.body.username},  req.body.password, function(err, user) {
-    if(err) {
-      console.log(err);
-      res.redirect("/register")
-    } else {
-      passport.authenticate("local") (req, res, function() {
-        res.redirect("/sharenotes");
-      });
-    }
-  });  
-     });
- 
-
-app.post("/login", function(req, res, next) {
-  passport.authenticate("local", function(err, user, info) {
-    if (err) {
-      // Handle error
-      return res.render("errorPage", { errorMessage: "An error occurred." });
-    }
-    if (!user) {
-      // No user found (incorrect password)
-      return res.render("thankyou", { errorMessage: "Incorrect password. Please try again." });
-    }
-    
-    // If user is authenticated, log in and redirect to the desired page
-    req.logIn(user, function(err) {
-      if (err) {
-        return res.render("errorPage", { errorMessage: "An error occurred." });
+  app.post("/register", function(req, res) {
+    User.register({username: req.body.username},  req.body.password, function(err, user) {
+      if(err) {
+        console.log(err);
+        res.redirect("/register")
+      } else {
+        passport.authenticate("local") (req, res, function() {
+          res.redirect("/sharenotes");
+        });
       }
-      return res.redirect("/sharenotes"); // Successful login, redirect to sharenotes page
-    });
-  })(req, res, next);
-});
+    }); 
+       });
+      });
+     
 
 
-// app.post("/login", function(req, res) {
+      app.post("/login", function(req, res) {
 
-//   const user = new User({
-//     userName: req.body.username,
-//     userPassword: req.body.password
-//   });
-
-//   req.login(user, function(err) {
-//     if(err) {
-//       res.render(err);
-//     } 
-
-//     else {
-//       passport.authenticate("local") (req, res, function() {
-//         res.redirect("/sharenotes");
-//       });
-//     }
-
-//   })
-//   });
-
+        const user = new User({
+          userName: req.body.username,
+          userPassword: req.body.password
+        });
+      
+        req.login(user, function(err) {
+          if(err) {
+            console.log(err);
+          } else {
+            passport.authenticate("local") (req, res, function() {
+              res.redirect("/sharenotes");
+            });
+          }
+      
+        })
+        });
+      
 
 app.get("/resources", function(req, res){
 Resource.find({}, function(err, foundFiles){
@@ -421,6 +393,6 @@ app.post("/createnewcollegue",  upload, function(req, res) {
 
 
 // process.env.PORT ||
-app.listen(3000,function(){
-    console.log("i'm using port 3000");
+app.listen(PORT,function(){
+  console.log("i'm using port ",PORT);
 });

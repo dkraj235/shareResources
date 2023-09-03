@@ -46,42 +46,6 @@ body{
   color:#fff;
  
 }
-
-/*  */
-
-.educol{
-  width: 70%;
-  display: flex;
-  flex-direction: column;  
-  color: #333; 
-}
-
-/* Base styles */
-.eduLandingPage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-   
-}
-
-.eduheading { 
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.edudescription {
-  font-size: 18px;
-  margin: 0;
-}
-
-
-
-
-/*  */
-
-
-
  
 .mob_none{
   display: block;
@@ -515,6 +479,9 @@ body{
 
 }
 
+.card-body{
+  border-radius: 0% ;
+}
  
 
 button{
@@ -680,8 +647,8 @@ border-top: 5px dashed #fff;
   text-align: center;
 }
 .form-signin {
-  position: relative;
-  left: 70%;
+  position: relative; 
+  left: 40%;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; max-width: 330px;
   padding: 15px; 
 }
@@ -722,7 +689,8 @@ border-top: 5px dashed #fff;
 }
 
 .pdf-image { 
-  height: 105px;
+  height: 80px;
+  margin-bottom: 5px;
 }
 .pdf-image:hover { 
   opacity: 30%;
@@ -977,9 +945,9 @@ and (min-width : 1024px) {
     margin: 20px 0 0 0;
     width: 100%;
   }
-  .form-signin{
-     left: 70%;
-     margin-bottom: 50px;
+  .form-signin{ 
+     margin: 30px auto;
+     left: 3%;
   }
 
   #footer{
